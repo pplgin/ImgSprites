@@ -1,0 +1,51 @@
+{{#each layouts}}
+  {{#each layout.items}}
+  ${{meta.name}}: -{{x}}px -{{y}}px {{meta.width}}px {{meta.height}}px;
+  {{/each}}
+
+  @mixin sprite-width($sprite) {
+  width: nth($sprite, 3);
+  }
+
+  @mixin sprite-height($sprite) {
+  height: nth($sprite, 4);
+  }
+
+  @mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 1) - 4;
+  $sprite-offset-y: nth($sprite, 2) - 4;
+  background-position: $sprite-offset-x $sprite-offset-y;
+  }
+
+  {{#each sprites}}
+  @mixin sprite-{{name}}() {
+  background-image: url('#{$icon-sprite-path}/{{name}}.png?v=#{$version}');
+  }
+  {{/each}}
+
+  @mixin sprite($sprite) {
+  @include sprite-position($sprite);
+
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+
+  }
+
+  {{#each sprites}}
+  .{{name}} {
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border: none;
+    background: url('#{$icon-sprite-path}/{{name}}.png?v=#{$version}');
+    @include inline-block();
+    vertical-align: middle;
+    font-style: normal;
+  }
+  {{/each}}
+
+  {{#each layout.items}}
+  .{{meta.name}} {
+    @include sprite(${{meta.name}});
+  }
+  {{/each}}
+{{/each}}

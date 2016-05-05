@@ -1,0 +1,5 @@
+node_modules
+.DS_store
+img
+css
+npm-debug.log
