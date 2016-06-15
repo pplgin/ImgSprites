@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var gulpif = require('gulp-if');
 var sprity = require('sprity');
 
-gulp.task('sprites', function() {
+gulp.task('img', function() {
     sprity.src({
         src: 'icons/*.png',
         style: '_icon.scss',
