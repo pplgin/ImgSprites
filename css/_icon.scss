@@ -1,33 +1,34 @@
   $arrow_down: -158px -40px 32px 32px;
-  $arrow_left: -80px -150px 32px 32px;
+  $arrow_left: -40px -150px 32px 32px;
   $arrow_right: -158px -80px 32px 32px;
   $arrow_up: -0px -150px 32px 32px;
-  $article_normal: -40px -150px 32px 32px;
+  $article_normal: -80px -150px 32px 32px;
   $article_published_normal: -110px -48px 32px 32px;
   $article_published_selected: -0px -110px 32px 32px;
   $articlel_selected: -40px -110px 32px 32px;
-  $bizcard_hover: -32px -190px 24px 24px;
-  $bizcard_normal: -120px -110px 24px 24px;
+  $bizcard_hover: -64px -190px 24px 24px;
+  $bizcard_normal: -32px -190px 24px 24px;
   $checked: -0px -0px 54px 54px;
   $edit: -198px -0px 24px 24px;
   $fail: -152px -150px 24px 24px;
   $home_hover: -0px -190px 24px 24px;
   $home_normal: -120px -150px 24px 24px;
-  $icon_play_music_hover: -62px -0px 40px 40px;
-  $icon_play_music_normal: -110px -0px 40px 40px;
+  $icon_play_music_hover: -110px -0px 40px 40px;
+  $icon_play_music_normal: -62px -0px 40px 40px;
   $icon_stop_music_hover: -48px -62px 40px 40px;
   $icon_stop_music_normal: -0px -62px 40px 40px;
-  $image_hover: -198px -32px 24px 24px;
-  $image_normal: -198px -64px 24px 24px;
-  $import_hover: -198px -96px 24px 24px;
-  $import_normal: -198px -128px 24px 24px;
+  $icon_v: -230px -32px 16px 12px;
+  $image_hover: -198px -64px 24px 24px;
+  $image_normal: -198px -96px 24px 24px;
+  $import_hover: -198px -128px 24px 24px;
+  $import_normal: -120px -110px 24px 24px;
   $media_normal: -158px -0px 32px 32px;
   $media_selected: -80px -110px 32px 32px;
-  $music_hover: -64px -190px 24px 24px;
-  $music_normal: -96px -190px 24px 24px;
-  $video_hover: -128px -190px 24px 24px;
-  $video_normal: -160px -190px 24px 24px;
-  $vote_hover: -192px -190px 24px 24px;
+  $music_hover: -96px -190px 24px 24px;
+  $music_normal: -128px -190px 24px 24px;
+  $video_hover: -160px -190px 24px 24px;
+  $video_normal: -192px -190px 24px 24px;
+  $vote_hover: -198px -32px 24px 24px;
   $vote_normal: -230px -0px 24px 24px;
 
   @mixin sprite-width($sprite) {
@@ -122,6 +123,9 @@
   }
   .icon_stop_music_normal {
     @include sprite($icon_stop_music_normal);
+  }
+  .icon_v {
+    @include sprite($icon_v);
   }
   .image_hover {
     @include sprite($image_hover);
