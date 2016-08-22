@@ -17,7 +17,7 @@
   $icon_play_music_normal: -62px -0px 40px 40px;
   $icon_stop_music_hover: -48px -62px 40px 40px;
   $icon_stop_music_normal: -0px -62px 40px 40px;
-  $icon_v: -230px -32px 16px 12px;
+  $icon_v: -198px -32px 24px 24px;
   $image_hover: -198px -64px 24px 24px;
   $image_normal: -198px -96px 24px 24px;
   $import_hover: -198px -128px 24px 24px;
@@ -28,8 +28,8 @@
   $music_normal: -128px -190px 24px 24px;
   $video_hover: -160px -190px 24px 24px;
   $video_normal: -192px -190px 24px 24px;
-  $vote_hover: -198px -32px 24px 24px;
-  $vote_normal: -230px -0px 24px 24px;
+  $vote_hover: -230px -0px 24px 24px;
+  $vote_normal: -230px -32px 24px 24px;
 
   @mixin sprite-width($sprite) {
   width: nth($sprite, 3);
