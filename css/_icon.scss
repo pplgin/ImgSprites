@@ -1,35 +1,45 @@
-  $arrow_down: -158px -40px 32px 32px;
-  $arrow_left: -40px -150px 32px 32px;
-  $arrow_right: -158px -80px 32px 32px;
-  $arrow_up: -0px -150px 32px 32px;
-  $article_normal: -80px -150px 32px 32px;
-  $article_published_normal: -110px -48px 32px 32px;
-  $article_published_selected: -0px -110px 32px 32px;
-  $articlel_selected: -40px -110px 32px 32px;
-  $bizcard_hover: -64px -190px 24px 24px;
-  $bizcard_normal: -32px -190px 24px 24px;
+  $arrow_down: -160px -158px 32px 32px;
+  $arrow_left: -40px -158px 32px 32px;
+  $arrow_right: -166px -40px 32px 32px;
+  $arrow_up: -166px -0px 32px 32px;
+  $article_normal: -166px -80px 32px 32px;
+  $article_published_normal: -0px -158px 32px 32px;
+  $article_published_selected: -80px -158px 32px 32px;
+  $articlel_selected: -120px -158px 32px 32px;
+  $bizcard_daren_hover: -48px -198px 16px 16px;
+  $bizcard_daren_normal: -72px -198px 16px 16px;
+  $bizcard_hover: -96px -198px 16px 16px;
+  $bizcard_normal: -216px -198px 16px 16px;
+  $checkbox_checked: -0px -222px 16px 16px;
+  $checkbox_unchecked: -206px -136px 16px 16px;
   $checked: -0px -0px 54px 54px;
-  $edit: -198px -0px 24px 24px;
-  $fail: -152px -150px 24px 24px;
-  $home_hover: -0px -190px 24px 24px;
-  $home_normal: -120px -150px 24px 24px;
-  $icon_play_music_hover: -110px -0px 40px 40px;
-  $icon_play_music_normal: -62px -0px 40px 40px;
-  $icon_stop_music_hover: -48px -62px 40px 40px;
-  $icon_stop_music_normal: -0px -62px 40px 40px;
-  $icon_v: -198px -32px 24px 24px;
-  $image_hover: -198px -64px 24px 24px;
-  $image_normal: -198px -96px 24px 24px;
-  $import_hover: -198px -128px 24px 24px;
-  $import_normal: -120px -110px 24px 24px;
-  $media_normal: -158px -0px 32px 32px;
-  $media_selected: -80px -110px 32px 32px;
-  $music_hover: -96px -190px 24px 24px;
-  $music_normal: -128px -190px 24px 24px;
-  $video_hover: -160px -190px 24px 24px;
-  $video_normal: -192px -190px 24px 24px;
-  $vote_hover: -230px -0px 24px 24px;
-  $vote_normal: -230px -32px 24px 24px;
+  $fail: -206px -80px 24px 24px;
+  $icon_close_usercard: -92px -110px 36px 36px;
+  $icon_close_usercard_hover: -48px -110px 36px 36px;
+  $icon_play_music_hover: -0px -62px 40px 40px;
+  $icon_play_music_normal: -48px -62px 40px 40px;
+  $icon_preview: -206px -112px 16px 16px;
+  $icon_preview_hover: -144px -222px 16px 16px;
+  $icon_save: -206px -160px 16px 16px;
+  $icon_save_hover: -166px -120px 16px 16px;
+  $icon_saved: -136px -110px 16px 16px;
+  $icon_saving: -0px -198px 16px 16px;
+  $icon_stop_music_hover: -118px -0px 40px 40px;
+  $icon_stop_music_normal: -118px -48px 40px 40px;
+  $icon_upload_camera: -0px -110px 40px 40px;
+  $icon_upload_camera_hover: -62px -0px 48px 48px;
+  $image_hover: -120px -198px 16px 16px;
+  $image_normal: -144px -198px 16px 16px;
+  $import_hover: -168px -198px 16px 16px;
+  $import_normal: -192px -198px 16px 16px;
+  $media_normal: -206px -0px 32px 32px;
+  $media_selected: -206px -40px 32px 32px;
+  $music_hover: -24px -222px 16px 16px;
+  $music_normal: -48px -222px 16px 16px;
+  $video_hover: -72px -222px 16px 16px;
+  $video_normal: -96px -222px 16px 16px;
+  $vote_hover: -120px -222px 16px 16px;
+  $vote_normal: -24px -198px 16px 16px;
 
   @mixin sprite-width($sprite) {
   width: nth($sprite, 3);
@@ -91,26 +101,38 @@
   .articlel_selected {
     @include sprite($articlel_selected);
   }
+  .bizcard_daren_hover {
+    @include sprite($bizcard_daren_hover);
+  }
+  .bizcard_daren_normal {
+    @include sprite($bizcard_daren_normal);
+  }
   .bizcard_hover {
     @include sprite($bizcard_hover);
   }
   .bizcard_normal {
     @include sprite($bizcard_normal);
   }
+
+  .checkbox {
+    @include sprite($checkbox_unchecked);
+  }
+  .selected .checkbox {
+    @include sprite($checkbox_checked);
+  }
+
+
   .checked {
     @include sprite($checked);
-  }
-  .edit {
-    @include sprite($edit);
   }
   .fail {
     @include sprite($fail);
   }
-  .home_hover {
-    @include sprite($home_hover);
+  .icon_close_usercard {
+    @include sprite($icon_close_usercard);
   }
-  .home_normal {
-    @include sprite($home_normal);
+  .icon_close_usercard_hover {
+    @include sprite($icon_close_usercard_hover);
   }
   .icon_play_music_hover {
     @include sprite($icon_play_music_hover);
@@ -118,14 +140,35 @@
   .icon_play_music_normal {
     @include sprite($icon_play_music_normal);
   }
+  .icon_preview {
+    @include sprite($icon_preview);
+  }
+  .icon_preview_hover {
+    @include sprite($icon_preview_hover);
+  }
+  .icon_save {
+    @include sprite($icon_save);
+  }
+  .icon_save_hover {
+    @include sprite($icon_save_hover);
+  }
+  .icon_saved {
+    @include sprite($icon_saved);
+  }
+  .icon_saving {
+    @include sprite($icon_saving);
+  }
   .icon_stop_music_hover {
     @include sprite($icon_stop_music_hover);
   }
   .icon_stop_music_normal {
     @include sprite($icon_stop_music_normal);
   }
-  .icon_v {
-    @include sprite($icon_v);
+  .icon_upload_camera {
+    @include sprite($icon_upload_camera);
+  }
+  .icon_upload_camera_hover {
+    @include sprite($icon_upload_camera_hover);
   }
   .image_hover {
     @include sprite($image_hover);
